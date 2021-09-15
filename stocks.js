@@ -30,12 +30,22 @@ function calculateResult(inputs){
    const initialBuy =inputs.initialPriceVal*inputs.stockQtyVal
    const finalBuy = inputs.stockQtyVal*inputs.finalPriceVal
    const results = finalBuy-initialBuy
-   const resultPerc = (finalBuy/initialBuy) *100
+   const resultPerc = results/initialBuy* 100;
 
 return { results , resultPerc}
 }
 
+function output(res){
 
+    if (res.results > 0) {
+    outputDiv.innerText= `the profit is ${res.results} and percentage ${res.resulttPerc}` ;}
+
+    else if(res.results <0) {
+        outputDiv.innerText= `the loss is ${res.results} and percentage ${res.resultPerc}` ;}
+
+    else {
+        outputDiv.innerText= `you have no loss or profit`}
+}
 
 
 
