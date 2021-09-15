@@ -12,7 +12,7 @@ function clickHandler(){
   
   console.log(inputs.initialPriceVal,inputs.stockQtyVal,inputs.finalPriceVal)
   
-
+output(inputs.initialPriceVal) 
 //   console.log(inputs[0],inputs[1],inputs[2])   // to console log with inputVal
 }
 
@@ -24,6 +24,12 @@ function inputValue(){
         finalPriceVal: finalPrice.value ,
     }
 }
+
+function output(val){
+    outputDiv.innerText= val;
+
+}
+
 
 
 // function inputVal(){             // alternate function to take input values
