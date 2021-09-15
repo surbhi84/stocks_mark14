@@ -8,11 +8,12 @@ const outputDiv = document.querySelector(".output-div")
 calcBtn.addEventListener("click",clickHandler);
 
 function clickHandler(){
-  const inputs = inputValue() ;
+const inputs = inputValue() ;
   
-  console.log(inputs.initialPriceVal,inputs.stockQtyVal,inputs.finalPriceVal)
+const result =calculateResult(inputs);
   
-output(inputs.initialPriceVal) 
+output(result) 
+
 //   console.log(inputs[0],inputs[1],inputs[2])   // to console log with inputVal
 }
 
@@ -25,10 +26,16 @@ function inputValue(){
     }
 }
 
-function output(val){
-    outputDiv.innerText= val;
+function calculateResult(inputs){
+   const initialBuy =inputs.initialPriceVal*inputs.stockQtyVal
+   const finalBuy = inputs.stockQtyVal*inputs.finalPriceVal
+   const results = finalBuy-initialBuy
+   const resultPerc = (finalBuy/initialBuy) *100
 
+return { results , resultPerc}
 }
+
+
 
 
 
