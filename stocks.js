@@ -20,9 +20,10 @@ output(result)
 
 function inputValue(){
     return{
-        initialPriceVal: initialPrice.value ,
-        stockQtyVal: stockQty.value ,
-        finalPriceVal: finalPrice.value ,
+        initialPriceVal:parseFloat( initialPrice.value) ,
+        stockQtyVal: parseFloat(stockQty.value) ,
+
+        finalPriceVal: parseFloat(finalPrice.value) ,
     }
 }
 
