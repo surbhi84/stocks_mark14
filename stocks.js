@@ -38,7 +38,7 @@ return { results , resultPerc}
 function output(res){
 
     if (res.results > 0) {
-    outputDiv.innerText= `the profit is ${res.results} and percentage ${res.resulttPerc}` ;}
+    outputDiv.innerText= `the profit is ${res.results} and percentage ${res.resultPerc}` ;}
 
     else if(res.results <0) {
         outputDiv.innerText= `the loss is ${res.results} and percentage ${res.resultPerc}` ;}
