@@ -9,10 +9,14 @@ calcBtn.addEventListener("click",clickHandler);
 
 function clickHandler(){
 const inputs = inputValue() ;
-  
+ console.log(inputs)
+if (validateInput(inputs)) {
 const result =calculateResult(inputs);
-  
-output(result) 
+output(result)
+ }
+else {
+    outputDiv.innerText = "Enter input values greater than 0 and fill all input tabs"
+}
 
 //   console.log(inputs[0],inputs[1],inputs[2])   // to console log with inputVal
 }
@@ -22,9 +26,16 @@ function inputValue(){
     return{
         initialPriceVal:parseFloat( initialPrice.value) ,
         stockQtyVal: parseFloat(stockQty.value) ,
-
         finalPriceVal: parseFloat(finalPrice.value) ,
     }
+}
+
+function validateInput(inputs){
+if(isNaN(inputs.initialPriceVal) || isNaN(inputs.stockQtyVal) || isNaN(inputs.finalPriceVal) )
+return false;
+if (inputs.initialPriceVal<=0 || inputs.stockQtyVal<=0 || inputs.finalPriceVal<=0 )
+return false;
+return true;   
 }
 
 function calculateResult(inputs){
