@@ -1,0 +1,58 @@
+header {
+  width: 90vw;
+  color: azure;
+  font-size: 3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1.5rem;
+}
+html {
+  margin: auto;
+}
+h1 {
+  margin: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  margin: auto;
+  /* background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%); */
+}
+
+.input-tab {
+  height: 2rem;
+  border-radius: 8px;
+  border: 1.5px solid black;
+  font-size: larger;
+  margin: 1rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/media/image.webp");
+  background-size: cover;
+  height: 80vh;
+}
+
+button {
+  height: 3rem;
+  width: 6rem;
+  color: azure;
+  font-size: 1.5rem;
+
+  background-color: #182848;
+  border-radius: 8px;
+  border: 1.5px solid black;
+}
+
+.output-div {
+  height: 4rem;
+  text-align: center;
+  color: azure;
+  font-size: 2rem;
+  padding: 1rem;
+}

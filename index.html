@@ -1,20 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stocks.css" />
     <title>Stocks</title>
-</head>
+  </head>
 
-<body>
-<input type="number" id="initial-price" class="input-tab" placeholder="Initial stock price"/>
-<input type="number" id="stock-qty" class="input-tab" placeholder="Number of stocks"/>
-<input type="number" id="final-price" class="input-tab" placeholder="Present stock price"/>
+  <body>
+    <header><h1>Up&Down</h1></header>
+    <div class="inputs">
+      <input
+        type="number"
+        id="initial-price"
+        class="input-tab"
+        placeholder="Initial stock price"
+      />
+      <input
+        type="number"
+        id="stock-qty"
+        class="input-tab"
+        placeholder="Number of stocks"
+      />
+      <input
+        type="number"
+        id="final-price"
+        class="input-tab"
+        placeholder="Present stock price"
+      />
 
-<button class="calc-btn">tell me</button>
+      <button class="calc-btn">tell me</button>
+    </div>
+    <div class="output-div"></div>
+    <div class="about"></div>
 
-<div class="output-div"></div>
-</body>
-<script src="stocks.js" type="text/javascript"></script>
+    <footer>
+      <ul>
+        <li className="footerLink">
+          <a className="icon" href="https://github.com/SJTGSHIVAM">
+            <FaGithub />
+          </a>
+        </li>
+        <li className="footerLink">
+          <a className="icon" href="https://sjtgshivam.medium.com">
+            <FaMedium />
+          </a>
+        </li>
+        <li className="footerLink">
+          <a
+            className="icon"
+            href="https://www.linkedin.com/in/shivam-pandey-766524161"
+          >
+            <FaLinkedinIn />
+          </a>
+        </li>
+        <li className="footerLink">
+          <a className="icon" href="https://sjtgshivam.netlify.app/">
+            <FaBriefcase />
+          </a>
+        </li>
+      </ul>
+
+      <div className="legacyText">© 2021 | Shivam Pandey</div>
+    </footer>
+  </body>
+  <script src="stocks.js" type="text/javascript"></script>
 </html>
