@@ -6,6 +6,7 @@ A simple web appplication that you can use to calculate your profit or loss on y
 * Calculates upon clicking the button.
 * Displays the profit or loss message.
 * Consists of images and font styles.
+* Contains a footer with links to the developers social handles
 
 ## Technologies
 * Html
