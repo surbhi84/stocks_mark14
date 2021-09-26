@@ -57,10 +57,10 @@ function calculateResult(inputs) {
 }
 
 function output(res) {
-  document.body.style.backgroundColor = "white";
+  outputDiv.style.backgroundColor = "white";
   if (res.results > 0) {
     if (res.resultPerc > 50) {
-      document.body.style.backgroundColor = "green";
+      outputDiv.style.backgroundColor = "green";
     }
     outputDiv.innerText = `The profit is ${res.results.toFixed(
       2
@@ -69,7 +69,7 @@ function output(res) {
     res.results = res.results * -1;
     res.resultPerc = res.resultPerc * -1;
     if (res.resultPerc > 50) {
-      document.body.style.backgroundColor = "red";
+      outputDiv.style.backgroundColor = "red";
     }
     outputDiv.innerText = `The loss is ${res.results.toFixed(
       2
