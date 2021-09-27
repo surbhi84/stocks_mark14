@@ -6,6 +6,8 @@ const outputDiv = document.querySelector(".output-div");
 
 calcBtn.addEventListener("click", clickHandler);
 
+outputDiv.style.display = "none";
+
 function clickHandler() {
   const inputs = inputValue();
   if (validateInput(inputs)) {
@@ -43,6 +45,9 @@ function validateInput(inputs) {
 }
 
 function validationAlert() {
+  outputDiv.style.display = "block";
+  outputDiv.style.backgroundColor = "rgba(240, 255, 255, 0.562)";
+
   outputDiv.innerText =
     "Enter input values greater than 0 and fill all input tabs";
 }
@@ -57,10 +62,11 @@ function calculateResult(inputs) {
 }
 
 function output(res) {
-  outputDiv.style.backgroundColor = "white";
+  outputDiv.style.display = "block";
+
   if (res.results > 0) {
     if (res.resultPerc > 50) {
-      outputDiv.style.backgroundColor = "green";
+      outputDiv.style.backgroundColor = "#24db9d";
     }
     outputDiv.innerText = `The profit is ${res.results.toFixed(
       2
@@ -69,12 +75,14 @@ function output(res) {
     res.results = res.results * -1;
     res.resultPerc = res.resultPerc * -1;
     if (res.resultPerc > 50) {
-      outputDiv.style.backgroundColor = "red";
+      outputDiv.style.backgroundColor = "#fa4a69";
     }
-    outputDiv.innerText = `The loss is ${res.results.toFixed(
+    outputDiv.innerText = `Ooops you are in loss of ${res.results.toFixed(
       2
     )} and loss in Percentage is ${res.resultPerc.toFixed(2)}`;
   } else {
+    outputDiv.style.backgroundColor = "rgba(240, 255, 255, 0.562)";
+
     outputDiv.innerText = `You have no Loss or Profit!`;
   }
 }

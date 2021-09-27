@@ -14,6 +14,11 @@ h1 {
   margin: auto;
 }
 
+h2 {
+  color: azure;
+  font-size: 2rem;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -60,10 +65,10 @@ button {
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 2px;
+  border: 1.5px solid black;
 }
 
 footer {
-  /* padding-top: 3rem; */
   margin: 0;
   text-align: center;
 }
