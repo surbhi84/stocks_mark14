@@ -65,6 +65,8 @@ function output(res) {
   outputDiv.style.display = "block";
 
   if (res.results > 0) {
+    outputDiv.style.backgroundColor = "rgba(240, 255, 255, 0.562)";
+
     if (res.resultPerc > 50) {
       outputDiv.style.backgroundColor = "#24db9d";
     }
@@ -72,6 +74,8 @@ function output(res) {
       2
     )} and percentage of profit is ${res.resultPerc.toFixed(2)}`;
   } else if (res.results < 0) {
+    outputDiv.style.backgroundColor = "rgba(240, 255, 255, 0.562)";
+
     res.results = res.results * -1;
     res.resultPerc = res.resultPerc * -1;
     if (res.resultPerc > 50) {
